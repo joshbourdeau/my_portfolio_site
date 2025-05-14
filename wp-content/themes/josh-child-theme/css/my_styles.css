@@ -49,3 +49,24 @@
     gap: 3em;
 }
 
+/* Atomized Elements */ 
+
+.kt-btn-size-small {
+    font-size: 13px !important;
+    background-color: green;
+    border-radius: 2px 2px 8px 2px !important;
+} /* Might need to revisit this code, not sure why I'm having to use important or what's overiding this button. Might get screwed up if I got to customize a button later. */ 
+
+.kb-svg-icon-wrap {
+    background-color: #4B5AFB;
+    padding:7px 5px 7px 5px;
+    border-radius: 0px 0px 5px 0px;
+    color:#fff;
+}
+
+.josh-icon-btn {
+    background: none !important;
+    color:#4B5AFB !important;
+font-size: 15px !important;
+padding-left: 0px !important;
+}
