@@ -1,0 +1,51 @@
+
+/* Header Elements */
+
+
+.site-main-header-inner-wrap {
+    min-height: 0px;
+    border-bottom: 1px solid #E3E2E0;
+    padding-bottom: 17px;
+
+}
+
+
+.main-navigation {
+    color:#fff;
+
+}
+
+.header-navigation .menu {
+    padding: 82px 0px 0px 0px;
+}
+
+/*
+.main-navigation .primary-menu-container > ul > li.menu-item > a {
+    padding:0px; 
+    background-color: green;
+}
+*/
+
+.last-menu-item a {
+    padding-right: 0px !important;
+}
+
+
+.site-branding a.brand {
+    align-items:start;
+}
+
+
+
+/* Content Elements */
+
+.entry-content-wrap {
+    padding: 0px;
+}
+
+
+/* This is for adding more gap for the grid block since I couldn't find that in the block setting */
+:where(.is-layout-grid) {
+    gap: 3em;
+}
+
