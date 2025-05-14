@@ -70,3 +70,50 @@
 font-size: 15px !important;
 padding-left: 0px !important;
 }
+
+/* Footer Styling */
+
+.site-footer {
+    width:600px;
+    background:#231F20;
+    color:#F5F4F3;
+    border-radius: 0px 16px 0px 0px !important;
+    padding-bottom: 0px;
+    padding-top:20px;
+}
+
+.site-bottom-footer-inner-wrap {
+    padding:14px 15px 0px 15px;
+}
+
+.footer-logo {
+    display: block;
+    float: left;
+    color: #BA9D7A;
+    font-weight: 300;
+    margin-right: 50px;
+}
+
+.footer-list {
+    width:300px;
+    float:left;
+}
+
+.footer-list ul {
+    display: block;
+    float: right;
+
+}
+
+.footer-list li {
+    display: block;
+    float:left;
+    padding-right:25px;
+    padding-top:8px;
+    list-style-type: circle;
+    color:#C1B8B0;
+}
+
+.footer-html {
+    margin:-1em;
+}
