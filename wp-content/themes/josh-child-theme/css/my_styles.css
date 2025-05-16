@@ -19,12 +19,14 @@
     padding: 82px 0px 0px 0px;
 }
 
-/*
-.main-navigation .primary-menu-container > ul > li.menu-item > a {
-    padding:0px; 
-    background-color: green;
+ul.sub-menu {
+    border-radius: 0px 0px 8px 0px;
 }
-*/
+
+
+
+
+
 
 .last-menu-item a {
     padding-right: 0px !important;
@@ -117,3 +119,7 @@ padding-left: 0px !important;
 .footer-html {
     margin:-1em;
 }
+
+
+
+/* Notes */
