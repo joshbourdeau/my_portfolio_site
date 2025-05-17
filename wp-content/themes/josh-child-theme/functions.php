@@ -31,5 +31,12 @@
  }
  add_action('wp_enqueue_scripts', 'my_child_theme_enqueue_styles' , 20);
 
-?> 
 
+ // Script for adding my child theme's custom javascript file
+
+function my_custom_scripts() {
+    wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ),'',true );
+}
+add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
+
+?>
