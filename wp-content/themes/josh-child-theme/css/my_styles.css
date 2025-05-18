@@ -46,6 +46,10 @@ ul.sub-menu {
     padding: 0px;
 }
 
+.single-content figure.wp-block-image {
+    margin-bottom:0px;
+}
+
 
 /* This is for adding more gap for the grid block since I couldn't find that in the block setting */
 :where(.is-layout-grid) {
