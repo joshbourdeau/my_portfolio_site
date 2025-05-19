@@ -39,4 +39,34 @@ function my_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 
+
+// Trying to override the site branding hook with my own custon action hook 
+
+add_action( 'after_setup_theme', function() {
+    remove_all_actions( 'kadence_site_branding' );
+    add_action( 'kadence_site_branding', 'my_custom_site_branding' );
+});
+
+function my_custom_site_branding() {
+    ?>
+    <div class="site-branding">
+        <?php
+        // Show the logo
+        if ( function_exists( 'the_custom_logo' ) ) {
+            the_custom_logo();
+        }
+
+        // Display site title on homepage
+        if ( is_front_page() || is_home() ) {
+            echo '<div class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></div>';
+        } else {
+            // Display current page or post title
+            echo '<div class="site-title">' . 'My Work -' . esc_html( get_the_title() ) . '</div>';
+        }
+        ?>
+    </div>
+ 
+
+  <?php
+}
 ?>

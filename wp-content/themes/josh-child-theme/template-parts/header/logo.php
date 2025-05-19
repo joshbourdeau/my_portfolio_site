@@ -18,5 +18,3 @@ namespace Kadence;
 	do_action( 'kadence_site_branding' );
 	?>
 </div><!-- data-section="title_tagline" -->
-
-What does this?
