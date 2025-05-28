@@ -25,17 +25,67 @@ ul.sub-menu {
 
 
 
-
-
-
-
 .last-menu-item a {
     padding-right: 0px !important;
 }
 
 
+/* Before I used my own site branding hook
 .site-branding a.brand {
     align-items:start;
+}
+     */
+
+.site-branding .site-title a {
+    font-size: 28px;
+    text-decoration: none;
+    color: #444240;
+}
+
+.site-title {
+    font-size: 28px !important;
+} 
+
+.custom-logo {
+    width:50px;
+    padding-bottom: 20px;
+}
+
+.site-header-item {
+    align-items: start;
+}
+
+
+/* My role and tools section */
+
+.my-role-fields-container {
+    display: inline-block;
+
+}
+
+.my-role-title {
+    padding-right:17px;
+}
+
+.my-role-container {
+    margin-top:13px;
+    font-size: 14px;
+}
+
+.my-role-fields-container .role-item {
+    padding-right:20px;
+}
+
+.hashtag {
+    color:#C0C1D0;
+}
+
+.dash-line {
+    min-width: 32px;
+    border-bottom: 1px #E3E2E0 solid;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 17px;
 }
 
 
@@ -127,7 +177,7 @@ padding-left: 0px !important;
 
 
 
-/* Animation Attempt */
+/* Animation */
 
 .fade-in-text {
     opacity: 0;

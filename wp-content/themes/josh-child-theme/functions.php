@@ -49,6 +49,7 @@ add_action( 'after_setup_theme', function() {
 
 function my_custom_site_branding() {
     ?>
+    <div class="josh-site-branding-container">
     <div class="site-branding">
         <?php
         // Show the logo
@@ -61,12 +62,63 @@ function my_custom_site_branding() {
             echo '<div class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></div>';
         } else {
             // Display current page or post title
-            echo '<div class="site-title">' . 'My Work -' . esc_html( get_the_title() ) . '</div>';
+            echo '<div class="site-title">' . 'My Work - ' . esc_html( get_the_title() ) . '</div>';
         }
         ?>
     </div>
- 
 
-  <?php
+    
+    
+
+<?php
+
+  
+
+?>
+</div>
+
+<?php
+    }
+?>
+
+
+<?php 
+
+
+function add_my_role_section_inside_inner_wrap() {
+    if ( is_front_page() || is_home() ) {
+        echo "hey there";
+    } else {
+        $post_id = get_the_ID();
+
+        $PM_field         = get_field( 'project_management', $post_id );
+        $web_design_field = get_field( 'web_design', $post_id );
+        $uiux_field       = get_field( 'uiux', $post_id );
+
+        echo '<div class="site-container roles-tools-container my-role-container">';
+        echo '<span class="my-role-title">My role </span> <span class="dash-line"></span>';
+
+        if ( $PM_field || $web_design_field || $uiux_field ) {
+            echo '<div class="my-role-fields-container">';
+            if ( $PM_field ) {
+                echo '<span class="role-item">' . '<span class="hashtag">' . '#' . '</span>' . esc_html( $PM_field ) . '</span> ';
+            }
+            if ( $web_design_field ) {
+                echo '<span class="role-item">' . '<span class="hashtag">' . '#' . '</span>' . esc_html( $web_design_field ) . '</span> ';
+            }
+            if ( $uiux_field ) {
+                echo '<span class="role-item">' . '<span class="hashtag">' . '#' . '</span>' . esc_html( $uiux_field ) . '</span>';
+            }
+            echo '</div>';
+        } else {
+            echo '<span class="no-role-data">No role information available.</span>';
+        }
+
+        echo '</div>';
+    }
 }
+add_action( 'kadence_main_header', 'add_my_role_section_inside_inner_wrap', 20 );
+
+
+
 ?>
