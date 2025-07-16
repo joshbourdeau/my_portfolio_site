@@ -87,7 +87,7 @@ function my_custom_site_branding() {
 
 function add_my_role_section_inside_inner_wrap() {
     if ( is_front_page() || is_home() ) {
-        echo "hey there";
+        echo "";
     } else {
         $post_id = get_the_ID();
 
@@ -95,7 +95,7 @@ function add_my_role_section_inside_inner_wrap() {
         $web_design_field = get_field( 'web_design', $post_id );
         $uiux_field       = get_field( 'uiux', $post_id );
 
-        echo '<div class="site-container roles-tools-container my-role-container">';
+        echo '<div class="site-container project-banner-container"><div class="my-role-container">';
         echo '<span class="my-role-title">My role </span> <span class="dash-line"></span>';
 
         if ( $PM_field || $web_design_field || $uiux_field ) {
@@ -119,6 +119,46 @@ function add_my_role_section_inside_inner_wrap() {
 }
 add_action( 'kadence_main_header', 'add_my_role_section_inside_inner_wrap', 20 );
 
+
+// Attemping my own tools section 
+
+function add_my_tools_section_inside_inner_wrap() {
+    if ( is_front_page() || is_home() ) {
+        echo "";
+    } else {
+        $post_id = get_the_ID();
+
+        // Get each image field
+        $tools = [
+            get_field( 'asana', $post_id ),
+            get_field( 'figma', $post_id ),
+            get_field( 'wordpress', $post_id )
+        ];
+
+        echo '<div class="new-tools">';
+        echo '<span class="my-tools-title">Tools </span> <span class="dash-line"></span>';
+
+        // Filter out empty fields
+        $tools = array_filter( $tools );
+
+        if ( !empty( $tools ) ) {
+            echo '<div class="my-tools-fields-container">';
+
+            foreach ( $tools as $tool ) {
+                echo '<span class="role-item">';
+                echo '<img src="' . esc_url( $tool['url'] ) . '" alt="' . esc_attr( $tool['alt'] ) . '" class="tool-icon" />';
+                echo '</span>';
+            }
+
+            echo '</div>';
+        } else {
+            echo '<span class="no-role-data">No role information available.</span>';
+        }
+
+        echo '</div></div>';
+    }
+}
+add_action( 'kadence_main_header', 'add_my_tools_section_inside_inner_wrap', 20 );
 
 
 ?>
