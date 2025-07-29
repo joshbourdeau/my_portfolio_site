@@ -49,7 +49,7 @@ ul.sub-menu {
 .custom-logo {
     width:67px;
     padding-bottom: 20px;
-    padding-top: 11px;
+    padding-top: 0px;
 }
 
 .site-header-item {
@@ -115,6 +115,13 @@ ul.sub-menu {
     justify-content: space-between;
 }
 
+.page-id-1009 .project-banner-container {
+    display: none;
+}
+
+.page-id-13 .project-banner-container {
+    display: none;
+}
 
 
 /* Content Elements */
@@ -142,7 +149,7 @@ ul.sub-menu {
 } /* Might need to revisit this code, not sure why I'm having to use important or what's overiding this button. Might get screwed up if I got to customize a button later. */ 
 
 .kb-svg-icon-wrap {
-    background-color: #FF643D;
+    background-color: #BA9D7A;
     padding:7px 5px 7px 5px;
     border-radius: 0px 0px 5px 0px;
     color:#fff;
@@ -150,7 +157,7 @@ ul.sub-menu {
 
 .josh-icon-btn {
     background: none !important;
-    color:#FF643D !important;
+    color:#BA9D7A !important;
 font-size: 15px !important;
 padding-left: 0px !important;
 }
@@ -173,9 +180,12 @@ padding-left: 0px !important;
 .footer-logo {
     display: block;
     float: left;
-    color: #F5F4F3;
     font-weight: 300;
     margin-right: 50px;
+    background: linear-gradient(90deg, #FB4B53, #4B5AFB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .footer-list {
@@ -198,22 +208,6 @@ padding-left: 0px !important;
     list-style-type: circle;
     color:#C1B8B0;
 }
-
-.footer-list li:nth-child(1) {
-    color: #FF643D;
-  }
-  
-  .footer-list li:nth-child(2) {
-    color:#DDBE63;
-  }
-  
-  .footer-list li:nth-child(3) {
-    color: #A0C765;
-  }
-  
-  .footer-list li:nth-child(4) {
-    color: #BC7EE9;
-  }
 
 .footer-html {
     margin:-1em;

@@ -16,3 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(el);
     });
   });
+
+
+  document.querySelector('.page-id-13 .site-title').textContent = 'About Me';

@@ -60,7 +60,12 @@ function my_custom_site_branding() {
         // Display site title on homepage
         if ( is_front_page() || is_home() ) {
             echo '<div class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></div>';
-        } else {
+        } elseif ( is_page( ['about-me', 'project-management'] ) ) {
+            // Show the actual page title for specific pages
+            echo '<div class="site-title">' . esc_html( get_the_title() ) . '</div>';
+        }
+        
+        else {
             // Display current page or post title
             echo '<div class="site-title">' . 'My Work - ' . esc_html( get_the_title() ) . '</div>';
         }
