@@ -134,6 +134,13 @@ ul.sub-menu {
     margin-bottom:0px;
 }
 
+/* About Page */ 
+
+.about-heading-padding {
+    margin-left:161px !important;
+}
+
+
 
 /* This is for adding more gap for the grid block since I couldn't find that in the block setting */
 :where(.is-layout-grid) {
@@ -161,6 +168,11 @@ ul.sub-menu {
 font-size: 15px !important;
 padding-left: 0px !important;
 }
+
+.about-btn-white {
+    color:#fff !important;
+}
+
 
 /* Footer Styling */
 
