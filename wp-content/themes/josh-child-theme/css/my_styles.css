@@ -9,6 +9,14 @@
 
 }
 
+.page-id-76 .site-main-header-inner-wrap {
+    border: none;
+}
+
+.page-id-11 .site-main-header-inner-wrap {
+    border: none;
+}
+
 
 .main-navigation {
     color:#fff;
@@ -47,8 +55,8 @@ ul.sub-menu {
 } 
 
 .custom-logo {
-    width:67px;
-    padding-bottom: 20px;
+    width:56px;
+    padding-bottom: 35px;
     padding-top: 0px;
 }
 
@@ -115,11 +123,17 @@ ul.sub-menu {
     justify-content: space-between;
 }
 
+/* Hiding the my role banner on pages that don't need it */
+
 .page-id-1009 .project-banner-container {
     display: none;
 }
 
 .page-id-13 .project-banner-container {
+    display: none;
+}
+
+.page-id-11 .project-banner-container {
     display: none;
 }
 
@@ -140,6 +154,11 @@ ul.sub-menu {
     margin-left:161px !important;
 }
 
+/* My Work Page */ 
+
+.josh-img-block img {
+    width:300px;
+}
 
 
 /* This is for adding more gap for the grid block since I couldn't find that in the block setting */
@@ -173,6 +192,22 @@ padding-left: 0px !important;
     color:#fff !important;
 }
 
+.multiply-josh {
+    background-color: #F5F4F3; /* background to blend with */
+}
+
+.multiply-josh img {
+    mix-blend-mode: multiply; /* blends with the parent's background */
+}
+
+.home-gradient {
+    background: linear-gradient(180deg, #F0A132, #FF3FC9);
+  background-clip: text;
+  -webkit-background-clip: text;  /* Safari/Chrome */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Safari */
+  display: inline-block; /* Keeps the gradient from breaking across lines */
+}
 
 /* Footer Styling */
 
@@ -194,7 +229,7 @@ padding-left: 0px !important;
     float: left;
     font-weight: 300;
     margin-right: 50px;
-    background: linear-gradient(90deg, #FB4B53, #4B5AFB);
+    background:#F5F4F3;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
