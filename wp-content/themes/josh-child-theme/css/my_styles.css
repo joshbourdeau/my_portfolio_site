@@ -9,12 +9,13 @@
 
 }
 
-.page-id-76 .site-main-header-inner-wrap {
-    border: none;
-}
 
-.page-id-11 .site-main-header-inner-wrap {
-    border: none;
+.page-id-11 .site-main-header-inner-wrap, 
+.page-id-13 .site-main-header-inner-wrap, 
+.page-id-1009 .site-main-header-inner-wrap, 
+.page-id-76 .site-main-header-inner-wrap, 
+.page-id-15 .site-main-header-inner-wrap {
+    border: none; 
 }
 
 
@@ -137,6 +138,10 @@ ul.sub-menu {
     display: none;
 }
 
+.page-id-15 .project-banner-container {
+    display: none;
+}
+
 
 /* Content Elements */
 
@@ -146,6 +151,17 @@ ul.sub-menu {
 
 .single-content figure.wp-block-image {
     margin-bottom:0px;
+}
+
+
+
+/* Home Page */ 
+
+.home-feather-img {
+    position:absolute;
+    width:400px !important;
+    bottom: 380px;
+    left: 800px;
 }
 
 /* About Page */ 
@@ -175,7 +191,7 @@ ul.sub-menu {
 } /* Might need to revisit this code, not sure why I'm having to use important or what's overiding this button. Might get screwed up if I got to customize a button later. */ 
 
 .kb-svg-icon-wrap {
-    background-color: #BA9D7A;
+    background-color: #FF3FC9;
     padding:7px 5px 7px 5px;
     border-radius: 0px 0px 5px 0px;
     color:#fff;
@@ -183,13 +199,29 @@ ul.sub-menu {
 
 .josh-icon-btn {
     background: none !important;
-    color:#BA9D7A !important;
+    color:#FF3FC9 !important;
 font-size: 15px !important;
 padding-left: 0px !important;
 }
 
-.about-btn-white {
+.josh-icon-btn-contact {
+    background: none !important;
     color:#fff !important;
+font-size: 15px !important;
+padding-left: 0px !important;
+}
+
+.josh-icon-btn-contact .kb-svg-icon-wrap  {
+    background-color: #282522;
+    padding:7px 5px 7px 5px;
+    border-radius: 0px 0px 5px 0px;
+    color:#fff;
+}
+
+
+
+.about-btn-pink {
+    color:#FF3FC9 !important;
 }
 
 .multiply-josh {
@@ -209,10 +241,37 @@ padding-left: 0px !important;
   display: inline-block; /* Keeps the gradient from breaking across lines */
 }
 
+.wp-block-list {
+    padding-left: 16px !important;
+    line-height: 28px;
+}
+
+/* Form Styling */ 
+
+.kb-form label {
+    font-family: Manrope, sans-serif !important;
+    font-size: 14px;
+    font-weight: 600;
+    color:#fff;
+    
+}
+
+.kb-form .kadence-blocks-form-field .kb-text-style-field {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: #fff;
+}
+
+.kadence-blocks-form-field button {
+    background-color: #282522 !important;
+    font-family: Manrope, sans-serif !important;
+    font-size: 14px !important;
+}
+
+
 /* Footer Styling */
 
 .site-footer {
-    width:600px;
+    width:430px;
     background:#231F20;
     color:#F5F4F3;
     border-radius: 0px 16px 0px 0px !important;
@@ -250,7 +309,7 @@ padding-left: 0px !important;
 .footer-list li {
     display: block;
     float:left;
-    padding-right:25px;
+    padding-right:2px;
     padding-top:11px;
     list-style-type: circle;
     color:#C1B8B0;
